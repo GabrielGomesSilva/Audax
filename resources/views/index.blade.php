@@ -17,7 +17,7 @@
             <div class="col-4">
               <form action="{{route('usuarios.pesquisa')}}" method="POST">
                 @csrf
-                <input type="search" name="" id="">
+                <input type="text" name="pesquisa" id="">
                   <button type="submit" class="btn btn-primary"><img src="assets/icon/pesquisar_icon.svg"></button> 
               </form>
             </div>
@@ -94,12 +94,12 @@
             
                       
               <tr>
-                @foreach($solicitacao as $solicitacoes)
+                
                   <td>11/10/2021</td>
-                  <td>{{$solicitacoes->name}}</td>
+                  <td>$solicitacoes->name</td>
                   
                   
-                  @endforeach
+                 
                                                                    
               </tr> 
             

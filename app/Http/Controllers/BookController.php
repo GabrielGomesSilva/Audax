@@ -140,9 +140,10 @@ class BookController extends Controller
     }
 
     public function pesquisa(Request $request){
-        $pesquisa = usuariosrequest::where('name', 'LIKE', "%{$request->pesquisa}%")->paginate();
+        $pesquisa = User::where('name', '=', $request->pesquisa)->paginate();
+            dd($pesquisa);
 
-        return view('admin.pesquisa.index', compact('posts'));
+        //return view('index', compact('pesquisa'));
 
 
     }
